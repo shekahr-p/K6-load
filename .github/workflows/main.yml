@@ -17,3 +17,4 @@ jobs:
         with:
           filename: my-script-file.js
           flags: --vus 50 --duration 10s
+
