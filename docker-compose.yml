@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  statsd:
+    image: newrelic/nri-statsd:latest
+    container_name: statsd-new-relic
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - '8125:8125/udp'
