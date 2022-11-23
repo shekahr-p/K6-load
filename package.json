@@ -1,0 +1,19 @@
+{
+  "name": "k6-load",
+  "version": "1.0.0",
+  "description": "k^ nfr",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shekahr-p/K6-load.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shekahr-p/K6-load/issues"
+  },
+  "homepage": "https://github.com/shekahr-p/K6-load#readme"
+}
