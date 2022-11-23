@@ -2,8 +2,8 @@ name: Main Workflow
 on: [push]
 
 env:
-  NR_API_KEY: 4f81904de36c9ce244ff3d8109cb8fc1811aNRAL
-  NR_ACCOUNT_ID: 1004330272
+  NR_API_KEY: ${{ secrets.NR_API_KEY }}
+  NR_ACCOUNT_ID: ${{ secrets.NR_ACCOUNT_ID }}
   
 jobs:
   build:
