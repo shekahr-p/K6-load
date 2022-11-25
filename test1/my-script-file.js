@@ -4,29 +4,29 @@
 
 import http from 'k6/http'
 
-
 // main function where user will spread
+// export const options = {
+//     vus: 10,
+//     duration: '5m',
+//   }
+  export const options1 = {
+//stages array
+    stages: [
+      { duration: '10s', target: 5 },
+      { duration: '20s', target: 3 }
+    ]
+    , vus: 10,
+    duration: '1m',
+  }
 
-//virtual users
-export const options = {
-  vus: 10,
-  duration: '5m',
-}
-
-
-//Ram up
-
-//increase the load after certain petiod
-export const options1 = {
-
-  stages: [
-    { duration: '10s', target: 5 },
-    { duration: '20s', target: 3 }
-  ]
-}
+  
 export default function () {
 
-  http.get("https://www.google.com/")
-
+    http.get("https://www.google.com/")
+    check(res,{
+      'is status 200' :(r) =>r.status === 200,
+    });
 
 }
+
+

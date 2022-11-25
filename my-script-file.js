@@ -18,10 +18,14 @@ import http from 'k6/http'
     , vus: 10,
     duration: '1m',
   }
+
+  
 export default function () {
 
     http.get("https://www.google.com/")
-
+    check(res,{
+      'is status 200' :(r) =>r.status === 200,
+    });
 
 }
 
