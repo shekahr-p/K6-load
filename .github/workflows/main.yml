@@ -35,4 +35,3 @@ jobs:
         
       - name: run tests
         run : k6 run --vus 50 --duration 10m --out statsd my-script-file.js
-
