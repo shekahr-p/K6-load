@@ -30,9 +30,9 @@ jobs:
       - name: Create script
         run: echo "import http from 'k6/http'; import { sleep } from 'k6'; export default function() { http.get('http://emea-partners.newrelic-es.com'); sleep(1); }" > script.js
       
-      - name: insall 6
+      - name: install 6
         run: sudo snap install k6
         
       - name: run tests
-        run : k6 run --out statsd my-script-file.js
+        run : k6 run --vus 12 --duration 30s --out statsd my-script-file.js
 
