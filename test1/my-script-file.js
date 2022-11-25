@@ -4,16 +4,29 @@
 
 import http from 'k6/http'
 
+
 // main function where user will spread
+
+//virtual users
 export const options = {
-    vus: 10,
-    duration: '5m',
-  }
-export default function () {
-
-    http.get("https://www.google.com/")
-
-
+  vus: 10,
+  duration: '5m',
 }
 
 
+//Ram up
+
+//increase the load after certain petiod
+export const options1 = {
+
+  stages: [
+    { duration: '10s', target: 5 },
+    { duration: '20s', target: 3 }
+  ]
+}
+export default function () {
+
+  http.get("https://www.google.com/")
+
+
+}
